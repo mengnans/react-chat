@@ -9,11 +9,7 @@ function ChatButton() {
   const [isOpen, setOpen] = useState(false);
   let chatButtonIcon;
 
-  if (isOpen) {
-    chatButtonIcon = chatIcon;
-  } else {
-    chatButtonIcon = closeIcon;
-  }
+  chatButtonIcon = isOpen ? chatIcon : closeIcon;
 
   return (
     <div className='chat' onClick={() => setOpen(!isOpen)}>
