@@ -1,8 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import App from './js/presentational/App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
