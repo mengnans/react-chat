@@ -6,18 +6,17 @@
     "@material-ui/core": "^3.6.1",
     "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
     "react-lines-ellipsis": "^0.13.2",
-    "react-redux": "^5.1.1",
-    "react-scripts": "2.1.1",
-    "redux": "^4.0.1"
+    "react-scripts": "2.1.1"
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "lint-fix": "eslint --fix ./src/js/*/*.js",
-    "lint": "eslint ./src/js/*/*.js",
+    "lint-fix": "eslint --fix ./*.js",
+    "lint": "eslint ./*.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },
