@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import ChatButton from './ChatButton';
 import '../../styles/App.scss';
+import ChatContainer from '../container/ChatContainer';
 
 /**
  * the whole app
@@ -9,7 +9,7 @@ import '../../styles/App.scss';
 function App() {
   return (
     <div className='app'>
-      <ChatButton />
+      <ChatContainer />
     </div>
   );
 }
