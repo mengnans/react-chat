@@ -1,0 +1,25 @@
+@import "./variables";
+@import "./mixin";
+
+.input-bar {
+  min-height: 10%;
+  max-height: 40%;
+  width: $panel-width;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: $theme-color;
+  border-radius: 0 0 18px 18px;
+  display: table;
+  
+  .text {
+    padding: 0 18px;
+    font-size: 1em;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .default{
+    color: $secondary-color;
+  }
+}

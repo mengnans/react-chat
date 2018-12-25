@@ -5,6 +5,8 @@ import { INITIAL_STATE, chatReducer } from '../reducers/chatReducer';
 import ChatButton from '../presentational/ChatButton';
 import ChatPanel from '../presentational/ChatPanel';
 import { TOGGLE_CHAT } from '../constants/actions-types';
+import '../../styles/ChatContainer.scss';
+
 
 function ChatContainer() {
   let reducer = {};
@@ -15,9 +17,9 @@ function ChatContainer() {
   };
 
   return (
-    <div>
-      <ChatButton isOpen={state.isOpen} onClick={onChatButtonClick} />
+    <div className='chat-container'>
       <ChatPanel isOpen={state.isOpen} />
+      <ChatButton isOpen={state.isOpen} onClick={onChatButtonClick} />
     </div>
   );
 }

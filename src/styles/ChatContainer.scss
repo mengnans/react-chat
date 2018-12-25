@@ -1,0 +1,11 @@
+@import "./variables";
+@import "./mixin";
+
+.chat-container {
+  all: initial;
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  position: relative;
+  color: $primary-color;
+}

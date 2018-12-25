@@ -2,21 +2,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../../styles/ChatPanel.scss';
+import ChatPanelHeader from './ChatPanelHeader';
+import ChatPanelContent from './ChatPanelContent';
+import ChatPanelInputBar from './ChatPanelInputBar';
 
 
 function ChatPanel(props) {
   let chatButtonIcon;
   let { isOpen } = props;
-  let children = isOpen ?
-    <div className="chat-panel">
-      Panel
-    </div>
-    :
-    null;
+  let classNames = isOpen ? 'chat-panel' : 'chat-panel invisilbe';
 
   return (
-    <div>
-      {children}
+    <div className={classNames}>
+      <ChatPanelHeader headerText={'My Awesome Chat'}/>
+      <ChatPanelContent/>
+      <ChatPanelInputBar/>
     </div>
   );
 }

@@ -1,8 +1,20 @@
+@import './variables';
+@import './mixin';
+
+
 .chat-panel {
-  position: relative;
-  top: -600px;
-  right: -100px;
-  height: 500px;
-  width: 400px;
-  background: pink;
+  width: $panel-width;
+  height: $panel-height;
+  float: right;
+  position:absolute;
+  left: -$panel-width;
+  top: -$panel-height;
+  @include transition(all .5s linear);
   }
+
+  .invisilbe {
+    visibility: hidden;
+    height: 0;
+  }
+
+  

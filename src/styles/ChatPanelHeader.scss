@@ -1,0 +1,16 @@
+@import "./variables";
+@import "./mixin";
+
+.header {
+  border-radius: 18px 18px 0 0;
+  background: $theme-color;
+  height: 18%;
+  width: 100%;
+  text-align: center;
+  display: table;
+  .text {
+    font-size: 1.5em;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,9 @@
+@import "./variables";
+@import "./mixin";
+
+.content {
+  background-color: $content-color;
+  height: 72%;
+  border-left: 1px solid $theme-color;
+  border-right: 1px solid $theme-color;
+}
