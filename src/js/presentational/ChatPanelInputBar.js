@@ -14,7 +14,4 @@ function ChatPanelInputBar(props) {
   );
 }
 
-ChatPanelInputBar.propTypes = {
-  headerText: PropTypes.string.isRequired,
-};
 export default ChatPanelInputBar;

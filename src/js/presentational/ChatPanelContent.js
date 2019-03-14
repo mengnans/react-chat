@@ -12,7 +12,4 @@ function ChatPanelContent(props) {
   );
 }
 
-ChatPanelContent.propTypes = {
-  headerText: PropTypes.string.isRequired,
-};
 export default ChatPanelContent;
