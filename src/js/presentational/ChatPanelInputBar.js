@@ -9,7 +9,29 @@ class ChatPanelInputBar extends PureComponent {
     this.state = {
       currentMsg: ''
     }
+    this.handleEnterKey = this.handleEnterKey.bind(this);
+    this.sendMsg = this.sendMsg.bind(this);
   }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleEnterKey);
+  }
+
+  handleEnterKey(e) {
+    if (e.keyCode === 13) {
+      this.sendMsg();
+    }
+  }
+  sendMsg() {
+    let { currentMsg } = this.state;
+    if (currentMsg.length > 0) {
+      this.props.sendMsg(currentMsg);
+      this.setState({
+        currentMsg: ''
+      })
+    }
+  }
+
 
   render() {
     let { currentMsg } = this.state;
@@ -20,12 +42,7 @@ class ChatPanelInputBar extends PureComponent {
             currentMsg: e.target.value
           })
         }} />
-        <span onClick={() => {
-          this.props.sendMsg(currentMsg);
-          this.setState({
-            currentMsg: ''
-          })
-        }}> 发送 </span>
+        <span onClick={this.sendMsg}> 发送 </span>
       </div>
     );
   }
