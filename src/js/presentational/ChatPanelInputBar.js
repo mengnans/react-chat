@@ -1,17 +1,33 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
 import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import '../../styles/ChatPanelInputBar.scss';
 
-function ChatPanelInputBar(props) {
+class ChatPanelInputBar extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentMsg: ''
+    }
+  }
 
-  return (
-    <div className='input-bar'>
-      <div className='text default'>
-        Input your message here.
+  render() {
+    let { currentMsg } = this.state;
+    return (
+      <div className='input-bar'>
+        <input className="msgInput" value={currentMsg} placeholder='input your message here.' onChange={(e) => {
+          this.setState({
+            currentMsg: e.target.value
+          })
+        }} />
+        <span onClick={() => {
+          this.props.sendMsg(currentMsg);
+          this.setState({
+            currentMsg: ''
+          })
+        }}> 发送 </span>
       </div>
-    </div>
-  );
+    );
+  }
 }
-
 export default ChatPanelInputBar;
