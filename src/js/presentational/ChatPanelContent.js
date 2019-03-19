@@ -5,11 +5,18 @@ import '../../styles/ChatPanelContent.scss';
 
 function ChatPanelContent(props) {
 
-  return (
-    <div className='content'>
-        content
-    </div>
-  );
+  let { msgList } = props;
+  let sendList = [];
+  if (msgList && msgList.length > 0) {
+    msgList.map((msg, key) => {
+      sendList.push(
+        <div className='msgText' key={key} style={{ color: 'red' }}>
+          {msg}
+        </div>
+      );
+    })
+  }
+  return sendList;
 }
 
 export default ChatPanelContent;
